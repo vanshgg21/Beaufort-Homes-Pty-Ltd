@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://bbndevelopers.com.au/sitemap.xml
