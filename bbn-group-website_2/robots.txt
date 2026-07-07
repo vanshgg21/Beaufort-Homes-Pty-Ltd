@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://bbngroup.com.au/sitemap.xml

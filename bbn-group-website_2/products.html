@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Products | BBN Group Scaffolding, Sydney</title>
+  <meta name="description" content="Browse BBN Group's scaffolding catalogue: forged and pressed couplers, quick lock system, jacks, base plates, props, steel boards, fencing and site supplies. Wholesale sales, Sydney.">
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+  <link rel="canonical" href="https://bbngroup.com.au/products.html">
+  <meta name="robots" content="index, follow">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="BBN Group">
+  <meta property="og:title" content="Products | BBN Group Scaffolding, Sydney">
+  <meta property="og:description" content="Wholesale scaffolding: couplers, quick lock, jacks, props, boards and site supplies.">
+  <meta property="og:url" content="https://bbngroup.com.au/products.html">
+  <meta property="og:image" content="https://bbngroup.com.au/images/share.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Products | BBN Group Scaffolding, Sydney">
+  <meta name="twitter:description" content="Wholesale scaffolding: couplers, quick lock, jacks, props, boards and site supplies.">
+  <meta name="twitter:image" content="https://bbngroup.com.au/images/share.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/group.css">
+</head>
+<body>
+
+  <nav class="main-nav">
+    <a class="nav-logo" href="index.html" aria-label="BBN Group home">
+      <img src="images/bbng-logo.svg" alt="BBN Group">
+    </a>
+    <button class="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="products.html" class="active">Products</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+  </nav>
+
+  <header class="page-hero">
+    <p class="label">Catalogue</p>
+    <h1>Our Products</h1>
+    <p class="intro">Everything below is available for sale, by the piece or in wholesale quantities. Add items and quantities to your enquiry and send it through; we reply with wholesale pricing and availability. No payment is taken online.</p>
+  </header>
+
+  <section class="section" style="padding-top:10px;" id="catalogue">
+    <!-- product grid rendered by js/products.js -->
+    <noscript><p>Please enable JavaScript to browse the catalogue, or call (02) 9757 4711 for our product list.</p></noscript>
+  </section>
+
+  <!-- floating enquiry bar -->
+  <button class="enquiry-fab" id="enquiryFab" aria-label="Open enquiry list" hidden>
+    Enquiry <span class="fab-count" id="fabCount">0</span>
+  </button>
+
+  <!-- enquiry drawer -->
+  <div class="enquiry-drawer" id="enquiryDrawer" aria-hidden="true">
+    <div class="drawer-head">
+      <h2 class="display" style="font-size:28px;">Your Enquiry</h2>
+      <button class="drawer-close" id="drawerClose" aria-label="Close enquiry">×</button>
+    </div>
+    <div class="drawer-items" id="drawerItems"><p class="drawer-empty">No items yet. Add products from the catalogue.</p></div>
+
+    <form action="https://formspree.io/f/mpqgneze" method="POST" class="info-form drawer-form" id="enquiryForm">
+      <input type="hidden" name="subject" value="Website Product Enquiry">
+      <input type="hidden" name="items" id="itemsField" value="">
+      <label for="eq-name">Full Name</label>
+      <input type="text" id="eq-name" name="name" required placeholder="Your name">
+      <label for="eq-company">Company (optional)</label>
+      <input type="text" id="eq-company" name="company" placeholder="Company name">
+      <label for="eq-email">Email Address</label>
+      <input type="email" id="eq-email" name="email" required placeholder="name@example.com">
+      <label for="eq-phone">Phone</label>
+      <input type="tel" id="eq-phone" name="phone" required placeholder="04XX XXX XXX">
+      <label for="eq-message">Notes (optional)</label>
+      <textarea id="eq-message" name="message" placeholder="Delivery suburb, timing, anything else"></textarea>
+      <button type="submit" class="submit-btn" style="width:100%;">Send Enquiry</button>
+      <p class="form-note">We reply with wholesale pricing and availability. Nothing is charged online.</p>
+    </form>
+  </div>
+  <div class="drawer-veil" id="drawerVeil" hidden></div>
+
+  <footer>
+    <a class="f-logo" href="index.html"><img src="images/bbng-logo.svg" alt="BBN Group" style="height:56px;"></a>
+    <ul class="f-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="products.html">Products</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+    <div class="sister">
+      <span class="sister-label">Also part of the BBN Group</span>
+      <div class="sister-row">
+        <a class="sister-mark" href="https://beauforthomes.com.au" target="_blank" rel="noopener" aria-label="Visit Beaufort Homes">
+          <img src="images/beaufort-logo.svg" alt="Beaufort Homes">
+        </a>
+        <a class="sister-mark" href="https://bbndevelopers.com.au" target="_blank" rel="noopener" aria-label="Visit BBN Developers">
+          <img class="sig" src="images/bbn-developers-logo.svg" alt="BBN Developers">
+        </a>
+      </div>
+    </div>
+    <p class="f-fine">© 2026 BBN Universal Pty Ltd, trading as BBN Group. All rights reserved.<br>29/323 Woodpark Road, Smithfield NSW 2164</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/products.js"></script>
+</body>
+</html>
