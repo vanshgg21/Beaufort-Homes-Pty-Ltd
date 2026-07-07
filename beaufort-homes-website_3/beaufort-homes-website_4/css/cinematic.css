@@ -1,0 +1,309 @@
+/* ============================================================
+   BEAUFORT HOMES — cinematic home page styles
+   Loaded on index.html only. Progressive enhancement:
+   everything is visible & readable with no JS at all.
+   ============================================================ */
+
+/* ---------- hero (pinned + scrubbed by JS on desktop) ---------- */
+
+.hero-dim {
+  position: absolute;
+  inset: 0;
+  background: #17191d;
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* ---------- statement chapter ---------- */
+
+.statement-ch {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 18vh 48px 10vh;
+}
+
+.statement-ch .label { display: block; margin-bottom: 34px; }
+
+.st-line {
+  display: block;
+  overflow: hidden;
+  padding-bottom: 0.14em;
+  margin-bottom: -0.14em;
+}
+
+.st-inner {
+  display: block;
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: clamp(36px, 5.6vw, 84px);
+  line-height: 1.12;
+}
+
+.st-inner em { font-style: italic; color: var(--red); }
+
+.statement-ch .st-copy {
+  max-width: 560px;
+  margin-top: 46px;
+  color: var(--charcoal-soft);
+  font-size: 18px;
+}
+
+/* ---------- stats chapter ---------- */
+
+.stats-ch {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 10vh 48px 16vh;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 48px;
+  border-top: 1px solid var(--line);
+}
+
+.stat-big { padding-top: 42px; }
+
+.stat-big .num {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: clamp(56px, 7vw, 104px);
+  line-height: 1;
+  color: var(--red);
+  font-variant-numeric: tabular-nums;
+}
+
+.stat-big .cap2 {
+  margin-top: 14px;
+  font-size: 12.5px;
+  letter-spacing: 0.26em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+/* ---------- capabilities chapter (pinned scrub on desktop) ---------- */
+
+.caps-ch {
+  background: var(--charcoal);
+  color: var(--cream);
+}
+
+.caps-stage {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 90px 48px;
+}
+
+.caps-head { margin-bottom: 60px; }
+
+.caps-head h2 {
+  font-family: var(--font-display);
+  font-size: clamp(32px, 4vw, 54px);
+  font-weight: 500;
+  max-width: 700px;
+}
+
+.caps-body { display: grid; grid-template-columns: 5fr 7fr; gap: 70px; align-items: start; }
+
+.caps-index { position: relative; }
+
+.caps-num {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: clamp(120px, 16vw, 240px);
+  line-height: 0.9;
+  color: rgba(247, 245, 241, 0.1);
+}
+
+.caps-num .cur { color: #C9787C; }
+
+.caps-progress {
+  margin-top: 34px;
+  width: 180px;
+  height: 2px;
+  background: rgba(247, 245, 241, 0.18);
+  position: relative;
+}
+
+.caps-progress .bar {
+  position: absolute;
+  left: 0; top: 0; bottom: 0;
+  width: 16.66%;
+  background: #C9787C;
+  transition: width 0.3s ease;
+}
+
+.cap-item { padding: 8px 0 34px; }
+
+.cap-item h3 {
+  font-family: var(--font-sans);
+  font-weight: 400;
+  font-size: clamp(20px, 2.2vw, 30px);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.cap-item p {
+  font-size: 17px;
+  color: rgba(247, 245, 241, 0.7);
+  max-width: 520px;
+}
+
+/* desktop: pin the stage, stack items for crossfade */
+@media (min-width: 960px) {
+  .caps-ch { height: 560vh; }
+  .caps-stage {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  .caps-items { position: relative; min-height: 240px; }
+  .cap-item {
+    position: absolute;
+    inset: 0 0 auto 0;
+    opacity: 0;
+    transform: translateY(26px);
+    transition: opacity 0.45s ease, transform 0.45s ease;
+    pointer-events: none;
+  }
+  .cap-item.active {
+    opacity: 1;
+    transform: none;
+    pointer-events: auto;
+  }
+}
+
+/* mobile / no-pin: simple list with divider */
+@media (max-width: 959px) {
+  .caps-body { grid-template-columns: 1fr; gap: 30px; }
+  .caps-num, .caps-progress { display: none; }
+  .cap-item { border-bottom: 1px solid rgba(247,245,241,0.14); }
+  .cap-item:last-child { border-bottom: 0; }
+  .cap-item::before {
+    content: attr(data-num);
+    display: block;
+    font-family: var(--font-display);
+    font-size: 18px;
+    color: #C9787C;
+    margin-bottom: 10px;
+  }
+}
+
+/* ---------- horizontal project showcase ---------- */
+
+.proj-ch { position: relative; }
+
+.proj-stage { overflow: hidden; }
+
+.proj-head {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 100px 48px 54px;
+}
+
+.proj-track {
+  display: flex;
+  gap: 44px;
+  padding: 0 48px 90px;
+  will-change: transform;
+}
+
+.p-card {
+  flex: 0 0 auto;
+  width: min(560px, 78vw);
+  background: #fff;
+  border: 1px solid var(--line);
+}
+
+.p-card .p-card-media {
+  position: relative;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+}
+
+.p-card .p-card-media img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  transition: transform 0.8s ease;
+}
+
+.p-card:hover .p-card-media img { transform: scale(1.04); }
+
+.p-card .p-card-body { padding: 30px 32px 34px; }
+
+.p-card .label { font-size: 11px; }
+
+.p-card h3 {
+  font-family: var(--font-display);
+  font-size: 32px;
+  font-weight: 500;
+  margin-top: 10px;
+}
+
+.p-card .loc { color: var(--muted); font-size: 14.5px; margin-top: 4px; }
+
+.p-card .p-card-specs {
+  display: flex;
+  gap: 26px;
+  margin-top: 20px;
+  padding-top: 18px;
+  border-top: 1px solid var(--line);
+  font-size: 13px;
+  color: var(--charcoal-soft);
+}
+
+.p-card .p-card-specs b {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--charcoal);
+}
+
+.p-card.end-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--charcoal);
+  color: var(--cream);
+  text-align: center;
+  min-height: 480px;
+}
+
+.p-card.end-card .inner { padding: 40px; }
+
+.p-card.end-card h3 {
+  font-family: var(--font-display);
+  font-size: 36px;
+  font-weight: 500;
+  margin-bottom: 26px;
+}
+
+/* mobile: native swipe */
+@media (max-width: 959px) {
+  .proj-track {
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 60px;
+  }
+  .p-card { scroll-snap-align: center; }
+  .proj-head { padding: 70px 24px 30px; }
+  .proj-track { padding-left: 24px; padding-right: 24px; }
+}
+
+/* ---------- scroll hint under showcase ---------- */
+
+.drag-hint {
+  max-width: 1240px;
+  margin: -50px auto 0;
+  padding: 0 48px 80px;
+  font-size: 11px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--muted);
+}

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | Beaufort Homes</title>
+  <meta name="description" content="Contact Beaufort Homes, commercial property development, Sydney. General enquiries, leasing and partnership opportunities.">
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+  <link rel="canonical" href="https://beauforthomes.com.au/contact.html">
+  <meta name="robots" content="index, follow">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Beaufort Homes">
+  <meta property="og:title" content="Contact Us | Beaufort Homes">
+  <meta property="og:description" content="Contact Beaufort Homes, commercial property development, Sydney. General enquiries, leasing and partnership opportunities.">
+  <meta property="og:url" content="https://beauforthomes.com.au/contact.html">
+  <meta property="og:image" content="https://beauforthomes.com.au/images/hero-poster.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Contact Us | Beaufort Homes">
+  <meta name="twitter:description" content="Contact Beaufort Homes, commercial property development, Sydney. General enquiries, leasing and partnership opportunities.">
+  <meta name="twitter:image" content="https://beauforthomes.com.au/images/hero-poster.jpg">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"GeneralContractor","name":"Beaufort Homes","image":"https://beauforthomes.com.au/images/hero-poster.jpg","description":"Sydney-based commercial property development company delivering considered, high-quality commercial and residential projects across Greater Sydney.","url":"https://beauforthomes.com.au","telephone":"+61297574711","email":"info@bbngroup.com.au","address":{"@type":"PostalAddress","streetAddress":"29/323 Woodpark Road","addressLocality":"Smithfield","addressRegion":"NSW","postalCode":"2164","addressCountry":"AU"},"areaServed":"Greater Sydney, New South Wales","slogan":"A Vision For Your Future","sameAs":["https://bbndevelopers.com.au"]}</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+  <nav class="main-nav">
+    <a class="nav-logo" href="index.html" aria-label="Beaufort Homes home">
+      <img src="images/logo.svg" alt="Beaufort Homes">
+    </a>
+    <button class="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="contact.html" class="active">Contact Us</a></li>
+    </ul>
+  </nav>
+
+  <header class="page-hero">
+    <p class="label">Contact</p>
+    <h1>Get in Touch</h1>
+  </header>
+
+  <section class="section" style="padding-top:20px;">
+    <div class="contact-grid">
+
+      <div class="reveal">
+        <div class="c-block">
+          <h3>General Enquiries</h3>
+          <a class="big" href="mailto:info@bbngroup.com.au">info@bbngroup.com.au</a>
+          <a class="big" href="mailto:sushil@bbngroup.com.au">sushil@bbngroup.com.au</a>
+        </div>
+        <div class="c-block">
+          <h3>Phone</h3>
+          <a class="big" href="tel:+61297574711">(02) 9757 4711</a>
+          <a class="big" href="tel:+61423225230">0423 225 230</a>
+        </div>
+        <div class="c-block">
+          <h3>Office</h3>
+          <p class="big">29/323 Woodpark Road,<br>Smithfield NSW 2164</p>
+        </div>
+        <div class="c-block">
+          <h3>Follow</h3>
+          <a class="social-icon" href="#" rel="noopener" aria-label="Follow on Instagram">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="2.6" y="2.6" width="18.8" height="18.8" rx="5.5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.6" cy="6.4" r="1.15" fill="currentColor" stroke="none"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="reveal">
+        <h2 class="display" style="font-size:34px; margin-bottom:6px;">Send an Enquiry</h2>
+        <p style="color:var(--charcoal-soft); font-size:15px;">Whether you have a site to discuss, a leasing enquiry, or a project you would like to partner on, complete the form below and we will be in touch.</p>
+
+        <!--
+          FORMSPREE SETUP:
+          1. Create a free account at https://formspree.io
+          2. Create a new form and copy its ID (looks like "xabcdefg")
+          3. Replace YOUR_FORM_ID in the action below with that ID
+          Submissions will then arrive at the email you registered.
+        -->
+        <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="info-form">
+          <label for="name">Full Name</label>
+          <input type="text" id="name" name="name" required placeholder="Your name">
+
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" required placeholder="name@example.com">
+
+          <label for="phone">Phone (optional)</label>
+          <input type="tel" id="phone" name="phone" placeholder="04XX XXX XXX">
+
+          <label for="type">Enquiry Type</label>
+          <select id="type" name="enquiry_type">
+            <option>General Enquiry</option>
+            <option>Leasing / Sales</option>
+            <option>Site or Development Opportunity</option>
+            <option>Partnership / Investment</option>
+            <option>Other</option>
+          </select>
+
+          <label for="message">Your Message</label>
+          <textarea id="message" name="message" required placeholder="How can we help you?"></textarea>
+
+          <button type="submit" class="submit-btn">Send Message</button>
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+  <footer>
+    <a class="f-logo" href="index.html"><img src="images/logo.svg" alt="Beaufort Homes"></a>
+    <ul class="f-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+      <li><a href="#" rel="noopener">Instagram</a></li>
+    </ul>
+    <div class="sister">
+      <span class="sister-label">Part of the BBN Group</span>
+      <a class="sister-mark sister-bbn" href="https://bbndevelopers.com.au" target="_blank" rel="noopener" aria-label="Visit BBN Developers">
+        <svg viewBox="0 0 40 40" aria-hidden="true"><path d="M8 12 L31 8 L34 29 L11 33 Z" fill="none" stroke="currentColor" stroke-width="2.2"/><circle class="peg" cx="8" cy="12" r="3.2"/><circle class="peg" cx="31" cy="8" r="3.2"/><circle class="peg" cx="34" cy="29" r="3.2"/><circle class="peg" cx="11" cy="33" r="3.2"/></svg>
+        <span class="tx"><span class="t">BBN</span><span class="s">Developers</span></span>
+      </a>
+    </div>
+    <p class="f-fine">© 2026 Beaufort Homes. All rights reserved.<br>ABN 46 606 414 199 · A Vision For Your Future</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
